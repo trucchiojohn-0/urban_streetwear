@@ -16,10 +16,8 @@
 
 # Environment Variables
 .env
-.env*.local
-.env.apple
-.env.production
-.env.development
+.env*
+!.env.example
 
 # Debug & Logs
 npm-debug.log*
