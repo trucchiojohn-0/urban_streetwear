@@ -2,8 +2,10 @@
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
+
     return (
         <>
             <div className="flex justify-between items-start p-5 mt-20">
@@ -60,6 +62,16 @@ export default function HomePage() {
                             height={250}
                         />
                     </div>
+                </div>
+            </div>
+            <div className='flex flex-col items-center justify-center gap-1.5'>
+                <h2 className='flex justify-center align-center font-bold text-2xl'>About Us</h2>
+                <div className='flex flex-col items-center align-center justify-center'>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p>Voluptate velit ipsa explicabo consequuntur tempora blanditiis optio repellat veniam delectus. Provident!</p>
+                    <a className='border border-black-900 rounded-xl bg-white text-black p-1.5 m-1 inline-flex items-center gap-2' href="/about">
+                        About Us <ArrowRight />
+                    </a>
                 </div>
             </div>
         </>
