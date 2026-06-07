@@ -7,7 +7,7 @@ import { ShoppingCart, User, ChevronDown, Search } from 'lucide-react';
         <header>
             <nav className="bg-white px-4 lg:px-5 py-5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <a href="/" className="flex items-center">
+                    <a href="/home" className="flex items-center">
                         <span className="self-center text-xl font-extrabold whitespace-nowrap dark:text-black">Urban</span>
                     </a>
                     <div className="flex items-center lg:order-2">

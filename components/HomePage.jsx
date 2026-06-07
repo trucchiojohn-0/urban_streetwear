@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
-export default function HomePage() {
+export default function Home() {
 
     return (
         <>
@@ -36,33 +36,65 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center min-h-screen w-full">
-                <div className="carousel rounded-sm gap-2.5">
-                    <div className="carousel-item bg-yellow-300">
-                        <Image
-                            src="/img_modern_collection.jpg"
-                            alt="Modern Collection"
-                            width={250}
-                            height={250}
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <Image
-                            src="/img_classic_collection.jpg"
-                            alt="Classic Collection"
-                            width={250}
-                            height={250}
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <Image
-                            src="/img_new_collection.jpg"
-                            alt="New Collection"
-                            width={250}
-                            height={250}
-                        />
-                    </div>
-                </div>
+            <div className="flex items-center justify-center min-h-screen w-full px-4 bg-gray-100">
+  {/* CONTAINER DO CARROSSEL: Habilita scroll horizontal e snap para travar no card */}
+  <div className="flex w-full max-w-[1000px] gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4">
+    
+    {/* CARD 1 */}
+    <div className="flex-none w-full max-w-[300px] h-[500px] snap-center relative rounded-[5px] overflow-hidden group">
+      <Image
+        src="/img_modern_collection.jpg"
+        alt="Modern Collection"
+        width={300}
+        height={500}
+        className="w-full h-full object-cover transition-transform duration-400 ease-out group-hover:scale-105"
+      />
+      {/* Overlay Cinza Escuro com opacidade */}
+      <div className="absolute inset-0 bg-gray-900/50 transition-opacity duration-300 group-hover:bg-gray-900/40" />
+      {/* Texto Centralizado */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <h3 className="text-white text-xl font-bold font-sans tracking-wide uppercase drop-shadow-md">
+          Modern Collection
+        </h3>
+      </div>
+    </div>
+
+    {/* CARD 2 */}
+    <div className="flex-none w-full max-w-[300px] h-[500px] snap-center relative rounded-[5px] overflow-hidden group">
+      <Image
+        src="/img_classic_collection.jpg"
+        alt="Classic Collection"
+        width={300}
+        height={500}
+        className="w-full h-full object-cover transition-transform duration-400 ease-out group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gray-900/50 transition-opacity duration-300 group-hover:bg-gray-900/40" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <h3 className="text-white text-xl font-bold font-sans tracking-wide uppercase drop-shadow-md">
+          Classic Collection
+        </h3>
+      </div>
+    </div>
+
+    {/* CARD 3 */}
+    <div className="flex-none w-full max-w-[300px] h-[500px] snap-center relative rounded-[5px] overflow-hidden group">
+      <Image
+        src="/img_new_collection.jpg"
+        alt="New Collection"
+        width={300}
+        height={500}
+        className="w-full h-full object-cover transition-transform duration-400 ease-out group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gray-900/50 transition-opacity duration-300 group-hover:bg-gray-900/40" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <h3 className="text-white text-xl font-bold font-sans tracking-wide uppercase drop-shadow-md">
+          New Collection
+        </h3>
+      </div>
+    </div>
+
+  </div>
+
             </div>
             <div className='flex flex-col mt-[5rem] mb-[5rem] justify-center items-center text-center font-montserrat'>
                 <h2 className='font-extrabold text-3xl mb-4'>About Us</h2>
