@@ -107,7 +107,7 @@ export default function Home() {
       </div>
       <div className='flex flex-col mt-[5rem] mb-[5rem] justify-center items-center text-center font-montserrat'>
         <h2 className='font-extrabold text-3xl mb-4'>About Us</h2>
-        <div className='flex flex-col items-center justify-center font-[----font-montserrat]'>
+        <div className='flex flex-col items-center justify-center font-[--font-montserrat]'>
           <p className='max-w-xl mb-6'>
             We are a store completely dedicated to <br />
             our clothing catalog and serving our customers!
